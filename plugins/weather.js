@@ -56,7 +56,7 @@ export function styleFromFallout(fallout) {
     );
     changeStyleFooter(footer, "#dfdada36", items, "rgba(151, 151, 151, 0.998)");
     arr[4] = "rainSmile.png";
-    imgSmile.src = arr.join("/");
+    imgSmile.src = `${arr[3]}/${arr[4]}`;
   } else if (fallout === "Clouds") {
     body.style.animation = "clouds 300s linear infinite";
     changeStyle(
@@ -70,7 +70,7 @@ export function styleFromFallout(fallout) {
     body.style.backgroundRepeat = "no repeat";
     body.style.backgroundSize = "cover";
     arr[4] = "cloudsSmile.png";
-    imgSmile.src = arr.join("/");
+    imgSmile.src = `${arr[3]}/${arr[4]}`;
   } else if (fallout === "Clear") {
     body.style.animation = "";
     changeStyle(
@@ -85,7 +85,7 @@ export function styleFromFallout(fallout) {
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundSize = "cover";
     arr[4] = "sunSmile.png";
-    imgSmile.src = arr.join("/");
+    imgSmile.src = `${arr[3]}/${arr[4]}`;
   }
 }
 
@@ -95,13 +95,13 @@ export function imgFromMetric(metric) {
   arr[3] = "img";
   if (metric >= 26) {
     arr[4] = "tempHot.png";
-    tempImg.src = arr.join("/");
+    tempImg.src = `${arr[3]}/${arr[4]}`;
   } else if (metric < 26 && metric >= 15) {
     arr[4] = "tempNormal.png";
-    tempImg.src = arr.join("/");
+    tempImg.src = `${arr[3]}/${arr[4]}`;
   } else if (metric < 15) {
     arr[4] = "tempCold.png";
-    tempImg.src = arr.join("/");
+    tempImg.src = `${arr[3]}/${arr[4]}`;
   }
 }
 
